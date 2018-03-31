@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 export default {
-    api(url) {
+    axios(url) {
+
     headers.Authorization = `Bearer Token from vuex`;
 
       return {
