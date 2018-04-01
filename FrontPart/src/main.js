@@ -4,8 +4,10 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import Vuelidate from 'vuelidate'
+import Vuex from 'Vuex'
 
-Vue.use(Vuelidate)
+Vue.use(Vuex);
+Vue.use(Vuelidate);
 
 Vue.config.productionTip = false
 
