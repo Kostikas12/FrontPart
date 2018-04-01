@@ -15,6 +15,16 @@
           </li>
         </ul>
         <form class="form-inline my-2 my-md-0">
+          <div class="btn-group" role="group">
+            <button id="btnGroupDrop" type="button" class="btn btn-secondary margin-right dropdown-toggle" 
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              en
+            </button>
+            <div class="dropdown-menu" aria-labelledby="btnGroupDrop">
+              <a class="dropdown-item cursor-hand">ru</a>
+              <a class="dropdown-item cursor-hand">en</a>
+            </div>
+          </div>
           <router-link to="/signup" class="btn btn-secondary margin-right">SignUp</router-link>
           <router-link to="/login" class="btn btn-secondary">Login</router-link>
         </form>
@@ -45,6 +55,10 @@ export default {
 .fade-enter, .fade-leave-to {
   opacity: 0;
   transition: opacity .2s;
+}
+
+.cursor-hand {
+  cursor: pointer;
 }
 
 </style>
