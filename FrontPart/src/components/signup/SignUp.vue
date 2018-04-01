@@ -22,7 +22,7 @@
           <div class="pt-1">
             <input class="form-control">
           </div>
-          <div class="pt-4">
+          <div class="pt-3">
             <button class="btn btn-block btn-secondary">Sign up</button>
           </div>
         </div>
