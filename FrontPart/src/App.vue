@@ -15,7 +15,7 @@
           </li>
         </ul>
         <form class="form-inline my-2 my-md-0">
-          <router-link to="/registration" class="btn btn-secondary margin-right">Registration</router-link>
+          <router-link to="/signup" class="btn btn-secondary margin-right">SignUp</router-link>
           <router-link to="/login" class="btn btn-secondary">Login</router-link>
         </form>
       </div>

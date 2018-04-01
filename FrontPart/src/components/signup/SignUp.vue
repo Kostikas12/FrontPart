@@ -2,7 +2,7 @@
   <div>
     <div class="container pt-5 pb-5">
       <div class="col-12 text-center">
-        <div><h4>Registration</h4></div>
+        <div><h4>Sign up</h4></div>
         <div class="col-md-6 offset-md-3 text-center">
           <div class="pt-3 text-left">
             <h6>Enter your Email address:</h6>
