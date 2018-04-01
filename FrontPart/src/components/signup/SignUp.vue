@@ -23,7 +23,7 @@
             <input class="form-control">
           </div>
           <div class="pt-4">
-            <button class="btn btn-block btn-secondary">Register!</button>
+            <button class="btn btn-block btn-secondary">Sign up</button>
           </div>
         </div>
       </div>

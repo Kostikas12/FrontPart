@@ -17,7 +17,7 @@
             <input class="form-control">
           </div>
           <div class="pt-4">
-            <button class="btn btn-block btn-secondary">Login!</button>
+            <button class="btn btn-block btn-secondary">Login</button>
           </div>
         </div>
       </div>
@@ -29,6 +29,7 @@
 export default {
   data () {
     return {
+
     }
   }
 }
