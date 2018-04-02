@@ -32,7 +32,7 @@
             </div>
           </div>
           <div v-show="!$v.password.$dirty ? false : passwordError" class="pt-3">
-            <div class="alert alert-danger text-center" role="alert">
+            <div class="alert alert-danger text-center m-0" role="alert">
               <strong>Password must be more than 6 symbols</strong>
             </div>
           </div>

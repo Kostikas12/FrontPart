@@ -32,7 +32,7 @@
             </div>
           </div>
           <div v-show="!$v.passwordFirst.$dirty ? false : passwordFirstError" class="pt-3">
-            <div class="alert alert-danger text-center" role="alert">
+            <div class="alert alert-danger text-center m-0" role="alert">
               <strong>Password must be more than 6 symbols</strong>
             </div>
           </div>
@@ -56,7 +56,7 @@
             </div>
           </div>
           <div v-show="!$v.passwordSecond.$dirty ? false : passwordSecondError" class="pt-3">
-            <div class="alert alert-danger text-center" role="alert">
+            <div class="alert alert-danger text-center m-0" role="alert">
               <strong>{{ passwordSecondErrorMessage }}</strong>
             </div>
           </div>
