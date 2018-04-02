@@ -18,7 +18,7 @@
           <div class="btn-group" role="group">
             <button id="btnGroupDrop" type="button" class="btn btn-secondary margin-right dropdown-toggle" 
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              {{ language }}
+              {{ lang }}
             </button>
             <div class="dropdown-menu" aria-labelledby="btnGroupDrop">
               <a @click="changeLanguage('ru')" class="dropdown-item cursor-hand">ru</a>
@@ -47,8 +47,8 @@ export default {
     }
   },
   computed: {
-    language() {
-      return Store.getters.getLanguage;
+    lang() {
+      return this.$store.state.language;
     },
   },
   methods: {

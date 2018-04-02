@@ -2,7 +2,7 @@
   <div>
     <div class="container pt-5 pb-5">
       <div class="col-12 text-center">
-        <h6>{{ lang }}</h6>
+        <h6>{{ content[lang].mainInfo }}</h6>
       </div>
     </div>
   </div>
