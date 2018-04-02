@@ -31,6 +31,11 @@
               </span>
             </div>
           </div>
+          <div v-show="!$v.passwordFirst.$dirty ? false : passwordFirstError" class="pt-3">
+            <div class="alert alert-danger text-center" role="alert">
+              <strong>Password must be more than 6 symbols</strong>
+            </div>
+          </div>
           <div class="pt-3 text-left">
             <h6>Retry password:</h6>
           </div>
@@ -50,6 +55,11 @@
               </span>
             </div>
           </div>
+          <div v-show="!$v.passwordSecond.$dirty ? false : passwordSecondError" class="pt-3">
+            <div class="alert alert-danger text-center" role="alert">
+              <strong>{{ passwordSecondErrorMessage }}</strong>
+            </div>
+          </div>
           <div class="pt-3">
             <button :disabled="signUpDisabled" class="btn btn-block btn-secondary">Sign up</button>
           </div>
@@ -65,12 +75,16 @@ import emailValidator from '../../../node_modules/email-validator';
 import { passwordCheck } from '../../utils/Validators';
 import { required } from 'vuelidate/lib/validators'
 
+const PasswordErrorMessageLength = 'Password must be more than 6 symbols';
+const PasswordErrorMessageEquals = 'Passwords must be equals';
+
 export default {
   data () {
     return {
       email: '',
       passwordFirst: '',
       passwordSecond: '',
+      passwordSecondErrorMessage: '',
       passwordTypeFirstEnabled: true,
       passwordTypeSecondEnabled: true,
     }
@@ -91,16 +105,20 @@ export default {
       return !emailValidator.validate(this.email);
     },
     passwordFirstError() {
-      if (passwordCheck(this.passwordFirst)) {
-        return false;
+      if (!passwordCheck(this.passwordFirst)) {
+        return true;
       }
-      return true;
+      return false;
     },
     passwordSecondError() {
-      if (passwordCheck(this.passwordSecond)) {
-        return false;
+      if (!passwordCheck(this.passwordSecond)) {
+        this.setPasswordSecondErrorMessage(PasswordErrorMessageLength);
+        return true;
+      } else if (this.passwordFirst !== this.passwordSecond) {
+        this.setPasswordSecondErrorMessage(PasswordErrorMessageEquals);
+        return true;
       }
-      return true;
+      return false;
     },
     signUpDisabled() {
       if (this.emailError || this.passwordFirstError || this.passwordSecondError) {
@@ -108,7 +126,12 @@ export default {
       }
       return false;
     }
-  }
+  },
+  methods: {
+    setPasswordSecondErrorMessage(message) {
+      this.passwordSecondErrorMessage = message;
+    },
+  },
 }
 </script>
 

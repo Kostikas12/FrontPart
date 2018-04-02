@@ -31,6 +31,11 @@
               </span>
             </div>
           </div>
+          <div v-show="!$v.password.$dirty ? false : passwordError" class="pt-3">
+            <div class="alert alert-danger text-center" role="alert">
+              <strong>Password must be more than 6 symbols</strong>
+            </div>
+          </div>
           <div class="pt-3">
             <button :disabled="loginDisabled" class="btn btn-block btn-secondary">Login</button>
           </div>
