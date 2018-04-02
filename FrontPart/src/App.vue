@@ -18,11 +18,11 @@
           <div class="btn-group" role="group">
             <button id="btnGroupDrop" type="button" class="btn btn-secondary margin-right dropdown-toggle" 
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              en
+              {{ language }}
             </button>
             <div class="dropdown-menu" aria-labelledby="btnGroupDrop">
-              <a class="dropdown-item cursor-hand">ru</a>
-              <a class="dropdown-item cursor-hand">en</a>
+              <a @click="changeLanguage('ru')" class="dropdown-item cursor-hand">ru</a>
+              <a @click="changeLanguage('en')" class="dropdown-item cursor-hand">en</a>
             </div>
           </div>
           <router-link to="/signup" class="btn btn-secondary margin-right">SignUp</router-link>
@@ -37,8 +37,25 @@
 </template>
 
 <script>
+
+import Store from './store/Store';
+
 export default {
-  name: 'App'
+  name: 'App',
+  data () {
+    return {
+    }
+  },
+  computed: {
+    language() {
+      return Store.getters.getLanguage;
+    },
+  },
+  methods: {
+    changeLanguage(language) {
+      Store.dispatch('changeLanguage', language);
+    },
+  },
 }
 </script>
 
