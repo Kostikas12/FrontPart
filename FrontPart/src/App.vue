@@ -16,7 +16,7 @@
         </ul>
         <form class="form-inline my-2 my-md-0">
           <div class="btn-group" role="group">
-            <button id="btnGroupDrop" type="button" class="btn btn-secondary margin-right dropdown-toggle" 
+            <button id="btnGroupDrop" type="button" class="btn btn-success margin-right dropdown-toggle" 
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               {{ lang }}
             </button>
@@ -25,8 +25,8 @@
               <a @click="changeLanguage('en')" class="dropdown-item cursor-hand">en</a>
             </div>
           </div>
-          <router-link to="/signup" class="btn btn-secondary margin-right">SignUp</router-link>
-          <router-link to="/login" class="btn btn-secondary">Login</router-link>
+          <router-link to="/signup" class="btn btn-success margin-right">SignUp</router-link>
+          <router-link to="/login" class="btn btn-success">Login</router-link>
         </form>
       </div>
     </nav>
