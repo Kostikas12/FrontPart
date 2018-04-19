@@ -10,7 +10,7 @@
           <div class="pt-1">
             <input v-model.trim="email" @input="$v.email.$touch()" 
             :class="{ 'is-invalid': !$v.email.$dirty ? false : emailError, 'is-valid': !emailError }" 
-            class="form-control">
+            class="form-control" type="text">
           </div>
           <div class="pt-3 text-left">
             <h6>Create password:</h6>
