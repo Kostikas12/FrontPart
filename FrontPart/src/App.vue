@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-      <router-link to="/" class="navbar-brand"><h4>FineLine</h4></router-link>
+      <router-link to="/" class="navbar-brand"><h4>Travelline</h4></router-link>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -16,10 +16,10 @@
         </ul>
         <form class="form-inline my-2 my-md-0">
           <div class="btn-group" role="group">
-            <button id="btnGroupDrop" type="button" class="btn btn-success margin-right dropdown-toggle" 
+            <span id="btnGroupDrop" class="button-type margin-right dropdown-toggle" 
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               {{ lang }}
-            </button>
+            </span>
             <div class="dropdown-menu" aria-labelledby="btnGroupDrop">
               <a @click="changeLanguage('ru')" class="dropdown-item cursor-hand">ru</a>
               <a @click="changeLanguage('en')" class="dropdown-item cursor-hand">en</a>
@@ -76,6 +76,11 @@ export default {
 
 .cursor-hand {
   cursor: pointer;
+}
+
+.button-type {
+  cursor: pointer;
+  color: white;
 }
 
 </style>

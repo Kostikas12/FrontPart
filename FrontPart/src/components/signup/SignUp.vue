@@ -25,9 +25,9 @@
               class="form-control">
               <span class="input-group-btn">
                 <button @click="passwordTypeFirstEnabled = !passwordTypeFirstEnabled" v-if="passwordTypeFirstEnabled" 
-                class="btn btn-success button-group" type="button">Show</button>
+                class="btn btn-default button-group" type="button">Show</button>
                 <button @click="passwordTypeFirstEnabled = !passwordTypeFirstEnabled" v-else 
-                class="btn btn-success button-group" type="button">Hide</button>
+                class="btn btn-default button-group" type="button">Hide</button>
               </span>
             </div>
           </div>
@@ -49,9 +49,9 @@
               class="form-control">
               <span class="input-group-btn">
                 <button @click="passwordTypeSecondEnabled = !passwordTypeSecondEnabled" v-if="passwordTypeSecondEnabled" 
-                class="btn btn-success button-group" type="button">Show</button>
+                class="btn btn-default button-group" type="button">Show</button>
                 <button @click="passwordTypeSecondEnabled = !passwordTypeSecondEnabled" v-else 
-                class="btn btn-success button-group" type="button">Hide</button>
+                class="btn btn-default button-group" type="button">Hide</button>
               </span>
             </div>
           </div>
@@ -61,7 +61,7 @@
             </div>
           </div>
           <div class="pt-3">
-            <button :disabled="signUpDisabled" class="btn btn-block btn-success">Sign up</button>
+            <button :disabled="signUpDisabled" class="btn btn-block btn-default">Sign up</button>
           </div>
         </div>
       </div>

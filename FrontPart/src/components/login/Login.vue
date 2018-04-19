@@ -25,9 +25,9 @@
               class="form-control">
               <span class="input-group-btn">
                 <button @click="passwordTypeEnabled = !passwordTypeEnabled" v-if="passwordTypeEnabled" 
-                class="btn btn-success button-group" type="button">Show</button>
+                class="btn btn-default button-group" type="button">Show</button>
                 <button @click="passwordTypeEnabled = !passwordTypeEnabled" v-else 
-                class="btn btn-success button-group" type="button">Hide</button>
+                class="btn btn-default button-group" type="button">Hide</button>
               </span>
             </div>
           </div>
@@ -37,7 +37,7 @@
             </div>
           </div>
           <div class="pt-3">
-            <button :disabled="loginDisabled" class="btn btn-block btn-success">Login</button>
+            <button :disabled="loginDisabled" class="btn btn-block btn-default">Login</button>
           </div>
         </div>
       </div>
